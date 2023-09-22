@@ -9,6 +9,7 @@ function Button({
   target,
   fn,
   disabled,
+  download,
 }: {
   content: string;
   href?: string;
@@ -17,6 +18,7 @@ function Button({
   target?: string;
   fn?: () => void;
   disabled?: boolean;
+  download?: string;
 }) {
   return (
     <>
@@ -25,6 +27,7 @@ function Button({
           className={`p-3 font-bold transition relative z-10 delay-75 w-full duration-300 flex items-center rounded-lg justify-center gap-3  uppercase text-xs md:text-sm tracking-wide text-white dark:text-dark hover:-translate-y-1 ${bg}`}
           href={href}
           target={target}
+          download={download}
         >
           <span>{content}</span>
           <div className="h-full w-[1px] dark:bg-dark bg-white transition duration-300 delay-70">

@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import Container from "../../components/Container";
-// import Image from "next/image";
 import me from "@/public/5.png";
+import { saveAs } from "file-saver";
 import { aboutIcons, tools } from "../../data/data";
 import Button from "../../components/Button";
 import PageTransition from "@/components/PageTransition";
@@ -90,11 +90,19 @@ function About() {
                   </div>
                 </div>
                 <div className="z-10 flex justify-center w-full items-center gap-4 flex-wrap sm:flex-nowrap">
-                  <Button
-                    Icon={aboutIcons.download}
-                    content="Download CV"
-                    href=""
-                  />
+                  <a
+                    href="/mahmoudHmmadia_cv.pdf"
+                    download={"mahmoudHmmadia_cv.pdf"}
+                    className="p-3 font-bold transition relative z-10 delay-75 w-full duration-300 flex items-center rounded-lg justify-center gap-3 uppercase text-xs md:text-sm tracking-wide text-white dark:text-dark hover:-translate-y-1 bg-cool_gradient"
+                  >
+                    <span>Download CV</span>
+                    <div className="h-full w-[1px] dark:bg-dark bg-white transition duration-300 delay-70">
+                      <span className="opacity-0">a</span>
+                    </div>
+                    <span className={`flex`}>
+                      <aboutIcons.download />
+                    </span>
+                  </a>
                   <Button
                     Icon={aboutIcons.more}
                     content="See More"

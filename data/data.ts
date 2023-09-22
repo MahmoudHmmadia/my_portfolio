@@ -223,7 +223,7 @@ export const myWorks: work[] = [
     title: "Movies And Series App Training Project",
     details:
       "it was Like Challenge To Make Such Project With beautiful UI, And I Choose To Do It",
-    info: "It was My Last Front-end Project Before I Start In Backend Road To Be A fullstack web developer, I Make The Ui By My Self, There is Som Many Ideas In My Mind Now To Make It Better, Maybe In Coming Days I will Make Some Changes, But I Love This Project Because I Approved to my self when i finish it that i can start in back-end with strong heart",
+    info: "It Was My Last Front-End Project Before I Start In Backend Road To Be A Full Stack Web Developer, I Make The Ui By My Self, There Is Some Many Ideas In My Mind Now To Make It Better, Maybe In Coming Days I Will Make Some Changes, But I Love This Project Because I Approved To My Self When I Finish It That I Can Start In Back-End With Strong Heart...",
     images: [
       {
         src: moviesHome,
