@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import me from "@/public/5.png";
-import { saveAs } from "file-saver";
 import { aboutIcons, tools } from "../../data/data";
 import Button from "../../components/Button";
 import PageTransition from "@/components/PageTransition";
 import PageTitle from "@/components/PageTitle";
+import ImageRenderer from "@/components/CoolImage";
 function About() {
   const [age, setAge] = useState(25);
   useEffect(() => {
@@ -23,11 +23,7 @@ function About() {
           <PageTitle content="about me" />
           <div className="flex flex-col md:flex-row items-center gap-12 justify-center ">
             <div className="profile md:w-[300px] w-[250px] aspect-square relative  rounded-full">
-              <img
-                alt=""
-                src={me.src}
-                className="object-contain rounded-full aspect-square border-[4px] border-solid border-dark dark:border-white"
-              />
+              <ImageRenderer url={me} profile />
               <div className="absolute w-[150%] opacity-10 -z-1 aspect-square rounded-full border-[1px] border-solid border-dark dark:border-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
               <div className="absolute w-[200%] opacity-30 -z-1 aspect-square rounded-full border-[1px] border-solid border-dark dark:border-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
               <div className="absolute w-[250%] opacity-10 -z-1 aspect-square rounded-full border-[1px] border-solid border-dark dark:border-white left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>

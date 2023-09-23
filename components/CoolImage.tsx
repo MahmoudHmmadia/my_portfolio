@@ -9,11 +9,13 @@ const ImageRenderer = ({
   thumb,
   width,
   height,
+  profile,
 }: {
   url: StaticImageData;
   thumb?: string;
   width?: number | string;
   height?: number | string;
+  profile?: boolean;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -46,7 +48,7 @@ const ImageRenderer = ({
           {/* ==> custom loader <== */}
           <div
             className={classnames(
-              "cool_image w-full h-full opacity-0",
+              "cool_image absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0",
               "thumb",
               "",
               {
@@ -63,9 +65,16 @@ const ImageRenderer = ({
           </div>
           <img
             alt="Alt"
-            className={classnames(`cool_image w-full`, {
-              ["isLoaded"]: !!isLoaded,
-            })}
+            className={classnames(
+              `cool_image w-full ${
+                profile
+                  ? "object-contain rounded-full aspect-square border-[4px] border-solid border-dark dark:border-white"
+                  : ""
+              }`,
+              {
+                ["isLoaded"]: !!isLoaded,
+              }
+            )}
             src={url.src}
             loading="lazy"
             onLoad={handleOnLoad}

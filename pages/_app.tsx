@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import "@/globals.scss";
 import "swiper/css";
-
 import Providers from "./providers";
 import Nav from "@/components/Nav";
 import { AnimatePresence } from "framer-motion";

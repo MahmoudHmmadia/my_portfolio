@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
-
 type PageTransitionProps = HTMLMotionProps<"div">;
 type PageTransitionRef = React.ForwardedRef<HTMLDivElement>;
 
@@ -21,7 +20,7 @@ function PageTransition(
         opacity: 1,
         y: 0,
         transition: {
-          stiffness: 100,
+          stiffness: 50,
           type: "spring",
           delay: 0.5,
         },
